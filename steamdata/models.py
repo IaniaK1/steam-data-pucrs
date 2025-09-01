@@ -8,4 +8,7 @@ class Game:
         self.year = year
         self.is_free = is_free
         self.price = price
-        self.genre = genre
+        if not genre or genre == ['']: # Com a amostra, percebi que alguns jogos não têm gênero definido
+            self.genre = ["Undefined"]
+        else:
+            self.genre = genre
