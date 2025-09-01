@@ -19,7 +19,7 @@ class GameLoader:
                         year=int(row['Release date'][-4:]) if row['Release date'] else None,
                         is_free=float(row['Price']) == 0.0 if row['Price'] else False,
                         price=float(row['Price']) if row['Price'] else 0.0,
-                        genre=row['Genres']
+                        genre=row['Genres'].split(',')
                     )
                     games.append(game)
         except Exception as e:
