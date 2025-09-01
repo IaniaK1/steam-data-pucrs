@@ -37,8 +37,9 @@ def main():
     # 3. Média de preço por gênero
     try:
         medias = GameQueries.media_de_preco_por_genero(games)
+        medias_ordenadas = sorted(medias.items(), key=lambda x: x[1], reverse=True)
         print('\nMédia de preço por gênero:')
-        for genero, media in medias.items():
+        for genero, media in medias_ordenadas:
             print(f"  {genero}: US$ {media:.2f}")
     except QueryError as e:
         print(f'Erro na consulta de médias: {e}')
