@@ -6,6 +6,8 @@ class GameLoader:
     """
     Responsável por carregar jogos a partir de um arquivo CSV.
     """
+
+
     @staticmethod
     def load_from_csv(filepath):
         games = []

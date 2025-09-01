@@ -1,7 +1,16 @@
 class Game:
     """
     Representa um jogo da Steam.
+
+    Atributos:
+        id (int): ID do jogo.
+        name (str): Nome do jogo.
+        year (int): Ano de lançamento.
+        is_free (bool): Indica se o jogo é gratuito.
+        price (float): Preço do jogo.
+        genre (list): Lista de gêneros do jogo.
     """
+
     def __init__(self, id, name, year, is_free, price, genre):
         self.id = id
         self.name = name

@@ -4,11 +4,13 @@ class DataLoadError(Exception):
     """
     pass
 
+
 class DataParseError(Exception):
     """
     Exceção levantada em caso de erro ao interpretar/converter dados do CSV.
     """
     pass
+
 
 class QueryError(Exception):
     """
