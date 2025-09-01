@@ -25,10 +25,10 @@ class GameLoader:
                             genre=row['Genres'].split(',')
                         )
                     except Exception as e:
-                        raise DataParseError(f"Erro ao interpretar linha: {row} - {e}")
+                        raise DataParseError(f'Erro ao interpretar linha: {row} - {e}')
                     games.append(game)
         except (OSError, IOError) as e:
-            raise DataLoadError(f"Erro ao abrir arquivo: {e}")
+            raise DataLoadError(f'Erro ao abrir arquivo: {e}')
         except Exception as e:
-            raise DataLoadError(f"Erro ao carregar jogos: {e}")
+            raise DataLoadError(f'Erro ao carregar jogos: {e}')
         return games
