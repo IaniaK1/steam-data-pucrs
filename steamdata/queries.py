@@ -26,5 +26,5 @@ class GameQueries:
         for game in games:
             for genero in game.genre:
                 precos[genero] = precos.get(genero, []) + [game.price]
-        medias = {genero: sum(precos[genero]) / len(precos[genero]) for genero in precos}
+        medias = {genero: round(sum(precos[genero]) / len(precos[genero]), 2) for genero in precos}
         return medias

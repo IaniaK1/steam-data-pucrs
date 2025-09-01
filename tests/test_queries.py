@@ -1,7 +1,7 @@
 from steamdata.loader import GameLoader
 from steamdata.queries import GameQueries
 
-games = GameLoader.load_from_csv('steam_games.csv')
+games = GameLoader.load_from_csv('samples/sample_20.csv')
 
 percentuais = GameQueries.percentual_gratuitos_e_pagos(games)
 print(f'Percentuais: {percentuais}')
