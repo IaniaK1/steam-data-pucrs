@@ -1,3 +1,16 @@
+"""
+Gera uma amostra aleatória de 20 jogos a partir do arquivo steam_games.csv, 
+ignorando as 20 primeiras linhas de dados (após o cabeçalho), conforme solicitado no enunciado do trabalho.
+
+A amostra é salva no arquivo samples/sample_20.csv, incluindo o cabeçalho original.
+
+Uso:
+    Basta executar este script uma vez para criar a amostra que será utilizada nos testes automatizados.
+
+Atenção:
+    - O resultado é utilizado para validar manualmente e automaticamente as respostas das queries.
+"""
+
 import csv
 import random
 
